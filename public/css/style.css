@@ -1,0 +1,60 @@
+body{
+    margin: 0%;
+    background-color: #b1a7a6;
+}
+
+h1{
+    text-align: center;
+    color: antiquewhite;
+    background-color: #660708;
+    margin: 0%;
+    padding: 15px;
+
+}
+.Main{
+    text-align: center;
+    font-size: x-large;
+    margin-top: 260px;
+}
+.log{
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: aquamarine;
+    background-color: #a4161a;
+    border-color: #d90429;
+    color: antiquewhite;
+}
+#fname{
+    height: 35px;
+}
+.weekDays-selector{
+    padding-top: 80px;
+    text-align: center;
+}
+.weekDays-selector input {
+    display: none!important;
+
+  }
+
+  .weekDays-selector input[type=checkbox] + label {
+    display: inline-block;
+    border-radius: 6px;
+    background: #dddddd;
+    height: 40px;
+    width: 70px;
+    padding: 15px;
+    margin-right: 3px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .weekDays-selector input[type=checkbox]:checked + label {
+    background: #0b090a;
+    color: #ffffff;
+  }
+  h2{
+    text-align: center;
+  }

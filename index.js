@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 const flash = require("express-flash");
 const session = require("express-session");
 let app = express();
+const myFunction = require('./waiters')
+
 
 const pgp = require("pg-promise")();
 
@@ -23,6 +25,7 @@ const config = {
 };
 
 const db = pgp(config);*/
+const waitersFunction = myFunction();
 
 app.engine("handlebars", exphbs.engine({ defaultLayout: "main" }));
 app.use(
@@ -38,7 +41,18 @@ app.use(
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
 
-  
+app.get('/', function (req, res) {
+    res.render('index');
+  });
+app.post('/waiters', function (req, res) {
+  let enterName = req.body.fname
+  console.log(enterName)
+  res.redirect('/')
+
+});
+app.get('/waiters/:username', function (req, res) {
+  res.render('waiterScreen');
+});
 
 let PORT = process.env.PORT || 3007;
 
