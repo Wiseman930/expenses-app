@@ -12,23 +12,28 @@
 </head>
 
 <body>
-
-    <h1>Expenses App</h1>
+    <div class="head">
+        <div class="div_icon">
+            <img src="https://github.com/Wiseman930/expenses-app/blob/master/Images/logo1.png?raw=true" alt="no image" class="center2">
+         </div>
+    </div>
     <form action="/login" method="POST">
-        <div class="TxtBx">
-            <label class="RG" for="fReg"></label>
-            <input type="text" id="fcode" name="codeNumber" value="" placeholder="enter login code"
-        </div>
-        <div class="Add">
-            <button class="button-primary AddButtn" type="submit" id="logbutton" name="button">Login</button>
-        </div>
-    </form>
     <div class="errorMessages">
         {{#if messages.errors}}
         <span>{{messages.errors}}</span>
         {{/if}}
     </div>
-
+    <div class="Main">
+        <div class="registration"><h3>Login</h3></div>
+        <div class="TxtBx">
+            <label for="Amount">Enter login code</label>
+            <input type="text" id="fcode" name="codeNumber" value="" placeholder="enter login code"
+        </div>
+        <div class="">
+            <button class="log" type="submit" id="" name="button">Login</button>
+        </div>
+    </div>
+    </form>
 </body>
 
 </html>

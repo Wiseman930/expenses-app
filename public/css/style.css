@@ -10,15 +10,11 @@ h1{
     margin: auto;
     padding: 15px;
 }
-h2{
-  transform:translateX(10px);
-  background-color: #ffffff;
-  padding: 5px;
-}
+
 .Main{
     text-align: center;
     font-size: x-large;
-    margin-top: 100px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     background-color: #d9d9d9;
@@ -53,6 +49,29 @@ table, th, td {
     color: antiquewhite;
     border-radius: 8px;
     box-shadow: 10px 10px 10px #0b090a;
+    width: 180px;
+}
+.registration{
+  background-color: #27187e;
+  color: antiquewhite;
+  padding-top: 0.1px;
+  padding-bottom: 0.1px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+.div_icon{
+  margin: auto;
+  display: block;
+}
+.center2
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  height: 80px;
+  padding-bottom: 20px;
+  margin-top: 20px;
 }
 input[type=text]{
   border-radius: 8px;
@@ -103,19 +122,21 @@ input[type=text]{
   }
   .errorMessages{
     text-align: center;
-    padding-top: 25px ;
     color: #a4161a;
-    font-size: 30px;
+    font-size: 20px;
+    margin-top: 30px;
     font-weight: 700;
     animation: hideAnimation 0s ease-in 4s;
     animation-fill-mode: forwards;
   }
   .codeMessages{
     text-align: center;
-    padding-top: 25px ;
     color: green;
-    font-size: 30px;
+    font-size:20px;
+    margin-top: 30px;
     font-weight: 700;
+    animation: hideAnimation 0s ease-in 15s;
+    animation-fill-mode: forwards;
   }
   .TxtBx{
     padding-top: 100px;
@@ -141,6 +162,9 @@ input[type=text]{
     background-color: #a4161a;
     border-color: #d90429;
     color: antiquewhite;
+  }
+  .expenses{
+    margin-top: 10px;
   }
   #banks{
     height: 25px;

@@ -13,9 +13,9 @@
 
 <body>
     <div class="head">
-        <h2><a href="/login">Login</a></h2>
-        <h1>Expenses App</h1>
-
+        <div class="div_icon">
+            <img src="https://github.com/Wiseman930/expenses-app/blob/master/Images/logo1.png?raw=true" alt="no image" class="center2">
+         </div>
     </div>
     <form action="waiter" method="post">
         <div class="codeMessages">
@@ -23,7 +23,13 @@
             <span>{{messages.code}}</span>
             {{/if}}
         </div>
+        <div class="errorMessages">
+            {{#if messages.errors}}
+            <span>{{messages.errors}}</span>
+            {{/if}}
+        </div>
         <div class="Main">
+           <div class="registration"><h3>Registration</h3></div>
             <table>
                 <tr>
                     <td> <label for="fname">First name</label></td>
@@ -39,14 +45,11 @@
                 </tr>
             </table>
             <input type="submit" class="log" name="fontSizeControl" id="sizeLarge" value="Register" />
+            <form action="/login">
+           <a href="/login"><input type="button" class="log" name="fontSizeControl" id="sizeLarge" value="Login" /></a>
+           </form>
         </div>
     </form>
-    <div class="errorMessages">
-        {{#if messages.errors}}
-        <span>{{messages.errors}}</span>
-        {{/if}}
-    </div>
-
 </body>
 
 </html>

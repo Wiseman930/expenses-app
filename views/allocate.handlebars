@@ -10,9 +10,14 @@
 
     </style>
 </head>
-<h1>Expenses App</h1>
-
-<h2>{{user.first_name}} {{user.last_name}} please add your expenses</h2>
+<body>
+    <div class="head">
+        <div class="div_icon">
+            <img src="https://github.com/Wiseman930/expenses-app/blob/master/Images/logo1.png?raw=true" alt="no image" class="center2">
+         </div>
+    </div>
+<div class="Main">
+    <h2>{{user.first_name}} {{user.last_name}} please add your expenses</h2>
     <form action="/allocate_user" method="POST">
             <table>
 
@@ -37,11 +42,14 @@
                 </tr>
             </table>
         <div class="Add">
-            <button class="button-primary AddButtn" type="submit" id="logbutton" name="button">Allocate expense</button>
+            <button class="log" type="submit" id="log" name="button">Add expense</button>
         </div>
     </form>
-    <a href="user_data">Your expenses</a>
-<body>
+    <div class="expenses">
+        <a href="user_data">Your expenses</a>
+    </div>
+</div>
+
 </body>
 
 </html>

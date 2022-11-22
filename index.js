@@ -61,7 +61,6 @@ app.post('/waiter', async function (req, res) {
   let emailCount = await db.one('SELECT COUNT(*) FROM register WHERE email=$1', [Email.toUpperCase()])
 
 
-
   if (format.test(firstName) == true && format.test(lastName) == true && emailFormat.test(Email) == true && wordCount.count == 0 && emailCount.count == 0) {
 
    expensesFunction.registerAll(firstName.toUpperCase(), lastName.toUpperCase(), Email.toUpperCase(), code)
@@ -69,7 +68,7 @@ app.post('/waiter', async function (req, res) {
    res.redirect('/');
   }
   else if (format.test(firstName) == false && format.test(lastName) == false && emailFormat.test(Email) == false){
-    req.flash('errors', 'Enter your first name, last name and Email')
+    req.flash('errors', 'Enter your first name, last name and email')
     res.redirect('/')
   }
   else if (firstName == '' || lastName == '' || Email == ''){
@@ -78,14 +77,14 @@ app.post('/waiter', async function (req, res) {
   }
   else if (wordCount.count !== 0 || emailCount.count !== 0) {
 
-    req.flash('errors', "one of the credntials already exist")
+    req.flash('errors', "One of the credntials already exist")
     res.redirect('/');
    }
 
 });
 
 app.get('/login', function (req, res) {
-
+         
   res.render('login');
   });
 
@@ -128,7 +127,7 @@ app.post('/login',async function (req, res) {
     res.redirect('allocate')
   }
   else if (codeCount.count == 0){
-    req.flash('errors', "enter code")
+    req.flash('errors', "Enter Login code")
     res.redirect('login')
   }
   });
