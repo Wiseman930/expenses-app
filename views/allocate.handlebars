@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<h1>Expenses App</h1>
+
+<h2>{{user.first_name}} {{user.last_name}} please add your expenses</h2>
+    <form action="/allocate_user" method="POST">
+            <table>
+
+                <tr>
+                    <td><label class="townText" for="towns">Select expense</label></td>
+                    <td>
+                        <select id="banks" name="expense" class="townsname" aria-label="State">
+                            <option value='' >Select Expense</option>
+                            {{#each dropdown}}
+                            <option value={{id}} >{{all_expenses}}</option>
+                            {{/each}}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="Amount">Amount of expense</label></td>
+                    <td><input type="text" placeholder="" id="lname" name="Amount"></td>
+                </tr>
+                <tr>
+                    <td><label for="date">Date of expense</label></td>
+                    <td><input type="date" id="Email" name="date"></td>
+                </tr>
+            </table>
+        <div class="Add">
+            <button class="button-primary AddButtn" type="submit" id="logbutton" name="button">Allocate expense</button>
+        </div>
+    </form>
+    <a href="user_data">Your expenses</a>
+<body>
+</body>
+
+</html>

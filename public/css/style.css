@@ -1,33 +1,76 @@
 body{
     margin: 0%;
-    background-color: #b1a7a6;
+    background-color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
 }
 
 h1{
     text-align: center;
-    color: antiquewhite;
-    background-color: #660708;
-    margin: 0%;
+    color: #0b090a;
+    margin: auto;
     padding: 15px;
-
+}
+h2{
+  transform:translateX(10px);
+  background-color: #ffffff;
+  padding: 5px;
 }
 .Main{
     text-align: center;
     font-size: x-large;
-    margin-top: 260px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #d9d9d9;
+    color: #0b090a;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px #0b090a;
+}
+.head{
+  background-color: #d9d9d9;
+  text-align: center;
+  margin: 0px;
+  color: antiquewhite;
+  display: flex;
+  box-shadow: 0 3px 10px #0b090a;
+
+}
+table, th, td {
+  margin: auto;
+  text-align: left;
 }
 .log{
     padding-left: 35px;
     padding-right: 35px;
     padding-top: 15px;
     padding-bottom: 15px;
+    margin-top: 20px;
     color: aquamarine;
-    background-color: #a4161a;
-    border-color: #d90429;
+    background-color: #27187e;
+    border-color: #27187e;
     color: antiquewhite;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px #0b090a;
+}
+input[type=text]{
+  border-radius: 8px;
 }
 #fname{
-    height: 35px;
+    height: 25px;
+    margin: 10px;
+}
+#lname{
+  height: 25px;
+  margin: 10px;
+}
+#Email{
+  height: 25px;
+  margin: 10px;
+}
+#banks{
+  margin-left: 10px;
 }
 .weekDays-selector{
     padding-top: 80px;
@@ -57,4 +100,71 @@ h1{
   }
   h2{
     text-align: center;
+  }
+  .errorMessages{
+    text-align: center;
+    padding-top: 25px ;
+    color: #a4161a;
+    font-size: 30px;
+    font-weight: 700;
+    animation: hideAnimation 0s ease-in 4s;
+    animation-fill-mode: forwards;
+  }
+  .codeMessages{
+    text-align: center;
+    padding-top: 25px ;
+    color: green;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .TxtBx{
+    padding-top: 100px;
+    text-align: center;
+  }
+  #fcode{
+    height: 35px;
+    width: 250px;
+    margin: 10px;
+  }
+
+  .Add{
+    text-align: center;
+
+  }
+  #logbutton{
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    color: aquamarine;
+    background-color: #a4161a;
+    border-color: #d90429;
+    color: antiquewhite;
+  }
+  #banks{
+    height: 25px;
+    text-align: center;
+  }
+  .town{
+    text-align: center;
+  }
+  .wp-table{
+    padding: 10px;
+    margin-top: 60px;
+  }
+  .wp-table2{
+    padding: 10px;
+    border: 1px solid black;
+  border-collapse: collapse;
+  }
+  th{
+    padding: 10px;
+  }
+  @keyframes hideAnimation {
+    to {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
   }

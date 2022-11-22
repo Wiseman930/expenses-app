@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="head">
+        <h2><a href="/login">Logout</a></h2>
+        <h1></h1>
+    </div>
+
+    <div class="user_data">
+        <table class="wp-table">
+            <tr>
+                <th class="wp-table2">Type of expense</th>
+                <th class="wp-table2">Amount of expense</th>
+                <th class="wp-table2">Date of expense</th>
+            </tr>
+            {{#each data}}
+            <tr>
+                <td class="wp-table2">{{all_expenses}}</td>
+                <td class="wp-table2">R{{amount}}.00</td>
+                <td class="wp-table2">{{expense_date}}</td>
+            </tr>
+            {{/each}}
+  </table>
+    </div>
+</body>
+</html>
